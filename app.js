@@ -1,15 +1,16 @@
 new Vue({
   el: "#vue-app",
   data: {
-    name: "",
-    age: ""
+    available: false,
+    nearby: false
   },
-  methods: {
-    logName: function() {
-      console.log("You entered your name");
-    },
-    logAge: function() {
-      console.log("You entered your age");
+  methods: {},
+  computed: {
+    compClasses: function() {
+      return {
+        available: this.available,
+        nearby: this.nearby
+      };
     }
   }
 });
