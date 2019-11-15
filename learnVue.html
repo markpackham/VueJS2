@@ -8,16 +8,11 @@
   </head>
   <body>
     <div id="vue-app">
-      <div id="bag" v-bind:class="{burst:ended}"></div>
-
-      <div id="bag-health">
-        <div v-bind:style="{width:health + '%'}"></div>
-      </div>
-
-      <div id="controls">
-        <button v-on:click="punch" v-show="!ended">Punch</button>
-        <button v-on:click="restart">Restart</button>
-      </div>
+      <h2>Refs</h2>
+      <input type="text" ref="input" />
+      <button v-on:click="readRefs()">Submit</button>
+      <p>Your fav food: {{ output }}</p>
+      <div ref="test">hello</div>
     </div>
   </body>
 
